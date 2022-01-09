@@ -26,11 +26,37 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
 }
 
 /* Universal tags */
 * {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  cursor: default;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography */
@@ -62,3 +88,85 @@ p {
   color: var(--color-black);
   margin: 4px 0;
 }
+
+.navbarAndHome {
+  background: url("imgs/home-background.png") center/cover no-repeat;
+}
+
+/* Navbar */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-white);
+  align-items: center;
+  padding: 16px;
+}
+
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+
+.navbar__menu__item:hover {
+  background-color: #b388ff;
+  cursor: pointer;
+}
+
+/* Home */
+
+#home {
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover {
+  background-color: #b388ff;
+}
+
+/* Section common */
+.s
+
+/* About */
