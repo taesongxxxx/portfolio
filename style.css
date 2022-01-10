@@ -247,7 +247,7 @@ p {
 
 /* Skills */
 #skills {
-  background-color: var(--background-color);
+  background: url("imgs/home-background.png") center/cover no-repeat;
 }
 
 .skill {
@@ -359,6 +359,7 @@ p {
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
+  border-radius: var(--size-border-radius);
 }
 
 .project__img {
@@ -398,4 +399,48 @@ p {
   height: 2px;
   margin-top: 8px;
   background-color: var(--color-dark-white);
+}
+
+/* Testimonials */
+#testimonials {
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 40px;
+  margin: auto;
+}
+
+.testmonial {
+  display: flex;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.testmonial__speech-bubble {
+  background-color: var(--color-white);
+  padding: 18px;
+  border-radius: var(--size-border-radius);
+}
+
+.testmonial__avatar {
+  width: 125px;
+  border: 2px solid var(--color-white);
+  border-radius: 4%;
+}
+
+.testmonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testmonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testmonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testmonial__speech-bubble a {
+  color: var(--color-purple);
 }
