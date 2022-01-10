@@ -137,6 +137,15 @@ p {
   cursor: pointer;
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  right: 40px;
+  top: 26px;
+  color: var(--color-white);
+  font-size: 24px;
+  display: none;
+}
+
 /* Home */
 
 #home {
@@ -247,7 +256,7 @@ p {
 
 /* Skills */
 #skills {
-  background: url("imgs/home-background.png") center/cover no-repeat;
+  background-color: var(--background-color);
 }
 
 .skill {
@@ -469,4 +478,35 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-dark-purple);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
 }
