@@ -12,5 +12,18 @@ document.addEventListener('scroll', () => {
   }
 });
 
+// Handle scrolling when tapping on the menu
 
-
+const navbar__menu = document.querySelector('.navbar__menu');
+document.addEventListener('click', (event) => {
+  const target = event.target;
+  const link = target.dataset.link;
+  
+  if (link == null) {
+    return;
+  }
+    
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({behavior:"smooth"});
+  
+});
