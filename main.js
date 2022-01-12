@@ -33,3 +33,18 @@ const homecontainer = document.querySelector('.home');
 document.addEventListener('scroll', () => {
   homecontainer.style.opacity = (homeHeight - window.scrollY) / homeHeight;
 });
+
+// Show "scroll btn" button when scrollling down
+const scrollbtn = document.querySelector('.scroll-btn');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight/2) {
+    scrollbtn.classList.add('active');
+  } else {
+    scrollbtn.classList.remove('active');
+  }
+});
+
+// Handle click on the "scroll btn" down
+scrollbtn.onclick = function(){
+  window.scroll({top: 0, behavior: 'smooth'});
+};  

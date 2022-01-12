@@ -487,6 +487,27 @@ p {
   transform: scale(1.1);
   color: var(--color-dark-purple);
 }
+/* Scroll */
+
+.scroll-btn {
+  border-radius: 50%;
+  position: fixed;
+  bottom : 50px;
+  right: 50px;
+  font-size: 50px;
+  width: 70px;
+  height: 70px;
+  background-color: #ff6e40;
+  color: var(--color-white);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+
+.scroll-btn.active {
+  pointer-events: auto;
+  opacity: 1;
+}
 
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
