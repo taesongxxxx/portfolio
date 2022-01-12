@@ -21,9 +21,10 @@ document.addEventListener('click', (event) => {
   
   if (link == null) {
     return;
-  }
-    
+  } 
+
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({behavior:"smooth"});
   
 });
+
