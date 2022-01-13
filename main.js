@@ -30,12 +30,18 @@ navbar__menu.addEventListener("click", (event) => {
   scrollTo.scrollIntoView({ behavior: "smooth" });
 });
 
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbar__menu.classList.toggle('open');
+}); 
+
 // contact me
 const contactbtn = document.querySelector('.home__contact');
 contactbtn.addEventListener('click', () => {
   const contact = document.querySelector('#contact');
   contact.scrollIntoView({ behavior: "smooth"});
-})
+});
 
 
 // Make home slowly fade to transparent as the window scrolls down
@@ -94,7 +100,5 @@ workbtncontainer.addEventListener("click", (e) => {
     }); 
   }, 300);
 
-
 });
-
 
