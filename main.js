@@ -13,8 +13,14 @@ document.addEventListener("scroll", () => {
 // Handle scrolling when tapping on the menu
 
 const navbar__menu = document.querySelector(".navbar__menu");
-document.addEventListener("click", (event) => {
+navbar__menu.addEventListener("click", (event) => {
+
   const target = event.target;
+  if (target.nodeName === 'LI') {
+    const active = document.querySelector('.navbar__menu__item.active');
+    active.classList.remove('active');
+    target.classList.add('active');
+  }
   const link = target.dataset.link;
   if (link == null) {
     return;
@@ -23,6 +29,14 @@ document.addEventListener("click", (event) => {
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 });
+
+// contact me
+const contactbtn = document.querySelector('.home__contact');
+contactbtn.addEventListener('click', () => {
+  const contact = document.querySelector('#contact');
+  contact.scrollIntoView({ behavior: "smooth"});
+})
+
 
 // Make home slowly fade to transparent as the window scrolls down
 
@@ -56,7 +70,12 @@ const projects = document.querySelectorAll(".project");
 workbtncontainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
 
-  if (filter === null) {
+  const active = document.querySelector('.category__btn.active');
+  active.classList.remove('active');
+  const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('active');
+
+    if (filter === null) {
     return;
   }
   projectcontainer.classList.add('anime-out');
@@ -72,8 +91,10 @@ workbtncontainer.addEventListener("click", (e) => {
       } else {
         project.classList.add('invisible');
       }
-    });
+    }); 
   }, 300);
 
 
 });
+
+
