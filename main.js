@@ -28,6 +28,8 @@ navbar__menu.addEventListener("click", (event) => {
 
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: "smooth" });
+
+  navbar__menu.classList.remove('open');
 });
 
 // Navbar toggle button for small screen
